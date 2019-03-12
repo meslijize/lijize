@@ -1,0 +1,56 @@
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String args[]){
+ 
+        Scanner s=new Scanner(System.in);
+ 
+        int sz[];
+ 
+        int x;
+ 
+        x=s.nextInt();
+ 
+        sz=new int[x];
+ 
+        int add[]=new int[x];
+ 
+        for(int i=0;i<x;i++)
+ 
+            sz[i]=s.nextInt();
+ 
+        for(int i=0;i<x;i++)
+ 
+            for(int j=0;j<x;j++){
+ 
+                if(sz[i]==sz[j]){
+ 
+                    add[i]++; 
+
+                 }
+ 
+            }
+ 
+        int max=0;
+ 
+        int a=0;
+ 
+        for(int i=0;i<x;i++)
+ 
+            if(add[i]>max){
+ 
+                max=add[i];
+ 
+                a=sz[i];
+ 
+            }
+ 
+        System.out.println(a);
+ 
+        System.out.println(max);
+ 
+          
+    }
+ 
+}
